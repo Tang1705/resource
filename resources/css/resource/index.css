@@ -1,0 +1,1056 @@
+@charset "utf-8";
+/* CSS Document */
+.banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#main {
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+    outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+
+.flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    position: relative
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides > li a {
+    display: block;
+}
+
+.flexslider .slides > li.clone {
+    position: relative
+}
+
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns] .slides {
+    display: block;
+}
+
+* html .slides {
+    height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+    display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+    background: #fff;
+    position: relative;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.loading .flex-viewport {
+    max-height: 300px;
+}
+
+.flexslider .slides {
+    zoom: 1;
+}
+
+.carousel li {
+    margin-right: 5px;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+    *height: 0;
+}
+
+.flex-direction-nav a {
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 48px;
+    margin: -50px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    text-indent: -999em
+}
+
+.flexslider:hover .flex-prev {
+    opacity: 0.7;
+    left: 0px;
+}
+
+.flexslider:hover .flex-next {
+    opacity: 0.7;
+    right: 0px;
+}
+
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+    opacity: 1;
+}
+
+.flex-direction-nav .flex-disabled {
+    opacity: 0 !important;
+    filter: alpha(opacity=0);
+    cursor: default;
+}
+
+/* Pause/Play */
+.flex-pauseplay a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    opacity: 0.8;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    color: #000;
+    background: #ddd
+}
+
+.flex-pauseplay a:before {
+    font-family: "flexslider-icon";
+    font-size: 20px;
+    display: inline-block;
+    content: '\f004';
+}
+
+.flex-pauseplay a:hover {
+    opacity: 1;
+}
+
+.flex-pauseplay a.flex-play:before {
+    content: '\f003';
+}
+
+/* Control Nav */
+.flex-control-nav {
+    width: auto;
+    position: absolute;
+    bottom: 2px;
+    *bottom: 13px;
+    right: 8px;
+    text-align: center;
+    z-index: 889;
+}
+
+.flex-control-nav li {
+    margin: 0 3px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border: 2px solid #fff;
+    cursor: pointer;
+    text-indent: -9999px;
+    border-radius: 8px;
+}
+
+
+
+.flex-control-thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+}
+
+.flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+
+.flex-control-thumbs img {
+    width: 100%;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.flex-control-thumbs img:hover {
+    opacity: 1;
+}
+
+.flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default;
+}
+
+.content {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.mode01 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.mode01 .lf {
+    width: 38.35%;
+    float: left;
+    overflow: hidden;
+}
+
+.mode01 .rt {
+    width: 58.5%;
+    float: right;
+    overflow: hidden;
+}
+
+.articleList {
+}
+
+.articleTitle {
+    padding-bottom: 5px;
+}
+
+.articleTitle .more {
+    float: right;
+    color: #01386F;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.articleTitle h2 {
+    font-size: 1.3em;
+    color: #01386F;
+    padding-left: 20px;
+    line-height: 30px;
+}
+
+.articleTitle span {
+    font-size: 1em;
+    color: #01386F;
+    line-height: 30px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #01386F;
+}
+
+/*News*/
+.ICON {
+    float: left;
+    height: 30px;
+    width: 5px;
+    background-color: #01386F;
+}
+
+.NewsList {
+    overflow: hidden;
+}
+
+.TopNews {
+    width: 50%;
+    float: left;
+}
+
+.TopImg {
+    width: 100%;
+}
+
+.TopImg img {
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
+.TopCon a {
+    display: block;
+}
+
+.TopCon a h2 {
+    font-weight: 600;
+    margin: 30px 0;
+    font-weight: 500;
+    color: #01386F;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "Cambria";
+    max-height: 42px;
+}
+
+.TopCon a:hover h2 {
+    text-decoration: underline;
+}
+
+.leftDate {
+    color: #888;
+    float: right;
+    font-size: 14px;
+}
+
+.TopCon p {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.NewsConList li {
+    border-bottom: 1px solid #ddd;
+}
+
+.NewsConList li a {
+    display: block;
+    padding: 20px 0;
+}
+
+.NewsConList li a h2 {
+    font-size: 18px;
+    color: #464646;
+    font-family: "Cambria";
+    font-weight: normal;
+    margin-bottom: 14px;
+    min-height: 42px;
+}
+
+.NewsConList li a {
+    display: block;
+    overflow: hidden;
+}
+
+.NewsConList li a:hover {
+    background-color: #fafafa;
+}
+
+.NewsConList li a:hover h2 {
+    color: #003770;
+    text-decoration: underline;
+}
+
+/* Notice */
+.tzggList {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.index_tzgg {
+    float: left;
+    width: 33.3%;
+}
+
+.index_tzgg_con {
+    display: block;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.index_tzgg_con .index_tzgg_l {
+    float: left;
+    width: 20%;
+}
+
+.index_tzgg_l_top {
+    line-height: 30px;
+    background: rgba(0, 56, 111, 1);
+    padding: 15px 0;
+}
+
+.index_tzgg_l_bottom {
+    line-height: 30px;
+    background: #ffffff;
+    box-shadow: 0px 0px 2px 0px rgba(135, 135, 135, 0.5);
+    border-radius: 1px 1px 0px 0px;
+}
+
+.index_tzgg_l_top h2 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.index_tzgg_l_top p {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.index_tzgg_l_bottom p {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0, 56, 111, 1);
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+.index_tzgg_con .index_tzgg_r {
+    float: right;
+    width: 75%;
+}
+
+.index_tzgg_r a {
+    display: block;
+    font-weight: 600;
+    color: rgba(0, 56, 111, 1);
+    margin-bottom: 30px;
+}
+
+.index_tzgg_r p {
+    line-height: 30px;
+    color: rgba(102, 102, 102, 1);
+}
+
+
+/*Lectures & Events*/
+.articleTitle01 {
+    border: 0;
+}
+
+.EventsList {
+    padding-top: 20px;
+}
+
+.EventsList li {
+    border-bottom: 1px dashed #ddd;
+    overflow: hidden;
+}
+
+.EventsList li a {
+    padding: 17px 0 5px 0px;
+}
+
+.EventsList li:last-child {
+    border-bottom: none;
+}
+
+.EventsList li .leftDate {
+    float: left;
+    overflow: hidden;
+    width: 16.73%;
+    background: #003770;
+    text-align: center;
+    font-family: "Book Antiqua";
+    padding: 2px 0;
+}
+
+.EventsList li .leftDate i {
+    margin: 3px 0;
+    font-size: 17px;
+    color: #f8d99b;
+    border-bottom: 1px solid #fff;
+    font-style: normal;
+    padding-bottom: 4px;
+}
+
+.EventsList li .leftDate strong {
+    font-weight: normal;
+    color: #f8d99b;
+    display: block;
+    font-size: 40px;
+}
+
+.EvensCon {
+    overflow: hidden;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.EvensCon h2 {
+    float: left;
+    font-size: 14px;
+    color: rgba(102, 102, 102, 1);
+    font-family: "Cambria";
+    font-weight: 600;
+    min-height: 30px;
+}
+
+.EvensCon span {
+    float: right;
+    font-size: 14px;
+    color: rgba(102, 102, 102, 1);
+    font-family: "Cambria";
+    font-weight: 600;
+    min-height: 30px;
+}
+
+.EvensCon p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.EventsList li a {
+    display: block;
+    overflow: hidden;
+}
+
+.EventsList li a:hover {
+    background-color: #fafafa;
+}
+
+.EventsList li a:hover h2 {
+    color: #003770;
+    text-decoration: underline;
+}
+
+.mode02 {
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.mode02 .lf {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+/*Research*/
+.ResearchList {
+    margin-top: 3%;
+}
+
+.ResearchList li {
+    float: left;
+    width: 32.33%;
+    margin-right: 1.5%;
+}
+
+.ResearchList li a {
+    display: block;
+}
+
+.ResearchList li a img {
+    display: block;
+}
+
+.ResearchList li a h2 {
+    font-size: 18px;
+    color: #464646;
+    font-family: "Cambria";
+    font-weight: normal;
+    margin-top: 3%;
+    min-height: 42px;
+    margin-bottom: 3%;
+}
+
+.ResearchList li a:hover h2 {
+    color: #003770;
+    text-decoration: underline;
+}
+
+.ResearchList li.NomarginRight {
+    margin-right: 0;
+}
+
+.Ritem-img {
+    width: 100%;
+    display: block;
+    height: 0;
+    padding-bottom: 50%;
+    overflow: hidden;
+}
+
+.mode03 {
+    max-width: 1200px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.mode03 .lf {
+    width: 58.25%;
+    float: left;
+    overflow: hidden;
+}
+
+.mode03 .rt {
+    width: 38.5%;
+    float: right;
+    overflow: hidden;
+}
+
+.EmployList {
+    margin-top: 4%;
+    overflow: hidden;
+}
+
+.EmployList li {
+    border-right: 1px solid #ddd;
+    float: left;
+    width: 48%;
+}
+
+.EmployList li a {
+    display: block;
+    padding-right: 10%;
+}
+
+.EmployList li a h2 {
+    font-size: 18px;
+    color: #464646;
+    font-family: "Cambria";
+    font-weight: normal;
+    min-height: 57px;
+    margin-bottom: 3%;
+}
+
+.EmployList li a:hover h2 {
+    text-decoration: underline;
+    color: #003770;
+}
+
+.EmployList li a p {
+    margin-top: 4%;
+    font-size: 12px;
+    color: #666;
+    max-height: 60px;
+}
+
+.EmployList li.EmployNoBorder {
+    border-right: none;
+    float: right;
+    width: 51%;
+}
+
+.EmployList li.EmployNoBorder a {
+    padding-left: 10%;
+    padding-right: 0;
+}
+
+/*Alumni*/
+.AlumniList {
+    margin-top: 7%;
+    overflow: hidden;
+    background: #003770;
+}
+
+.AlumniList a {
+    display: block;
+    overflow: hidden;
+}
+
+.AlumniList a .alumniImg {
+    width: 64.93%;
+    float: left;
+}
+
+.AlumniList a img {
+    display: block;
+    width: 100%;
+}
+
+.AlumniList a h2 {
+    float: right;
+    width: 33.67%;
+    font-weight: normal;
+    margin: 3% 0;
+    line-height: 24px;
+}
+
+.AlumniList a h2 p {
+    color: #fff;
+    padding: 0 5px;
+    text-align: left;
+}
+
+.AlumniList a:hover h2 p {
+    text-decoration: underline;
+}
+
+
+.WrapMode04 {
+    width: 100%;
+    overflow: hidden;
+    background: #e9edf2;
+    margin: 50px 0 0 0;
+}
+
+.mode04 {
+    max-width: 1200px;
+    margin: 30px auto 50px;
+    overflow: hidden;
+}
+
+.mode04 .lf {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.LinksList {
+    margin-top: 3%;
+}
+
+.LinksList li {
+    float: left;
+    width: 23.5%;
+    margin-right: 1.5%;
+}
+
+.LinksList li a {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.LinksList li a img {
+    display: block;
+}
+
+.LinksList li a h2 {
+    font-size: 18px;
+    font-family: "Cambria";
+    font-weight: bold;
+    min-height: 42px;
+    max-height: 42px;
+    position: absolute;
+    bottom: 0px;
+    /*background: url(../images/links_bg.png) repeat;*/
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 24px;
+}
+
+.LinksList li a h2 p {
+    padding: 0 10px;
+    color: #003770;
+}
+
+.LinksList li a:hover h2 {
+    color: #003770;
+    text-decoration: underline;
+}
+
+.LinksList li.NomarginRight {
+    margin-right: 0;
+}
+
+
+@media screen  and (max-width: 1200px) {
+    .mode01, .mode02, .mode03, .mode04, .WrapMode02, .WrapMode04 {
+        width: 98%;
+        margin: 20px auto 0;
+    }
+
+    .WrapMode02, .WrapMode04 {
+        width: 100%;
+    }
+
+    .TopCon a h2 {
+        margin-bottom: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 800px) {
+    .flex-direction-nav .flex-prev {
+        opacity: 0;
+        left: 0px;
+    }
+
+    .flex-direction-nav .flex-next {
+        opacity: 0;
+        right: 0px;
+    }
+
+    .flex-direction-nav a {
+        top: 65%;
+    }
+
+    .mode01 .lf {
+        width: 100%;
+        float: none;
+    }
+
+    .mode01 .rt {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+    }
+
+    .TopImg {
+        width: 33.92%;
+    }
+
+    .TopCon {
+        width: 62.02%;
+    }
+
+    .NewsConList li a h2 {
+        margin-bottom: 10px;
+        min-height: 19px;
+    }
+
+    .articleTitle h2 {
+        font-size: 1.3em;
+    }
+
+    .articleTitle .more {
+        font-size: 14px;
+    }
+
+    .EventsList li .leftDate {
+        width: 8.73%;
+    }
+
+    .EventsList li .leftDate i {
+        font-size: 16px;
+    }
+
+    .EventsList li .leftDate strong {
+        font-size: 20px;
+    }
+
+    .EvensCon {
+        width: 86%;
+    }
+
+    .EvensCon h2 {
+        padding-bottom: 8px;
+        min-height: 30px;
+    }
+
+    .TopCon a h2 {
+        font-size: 16px;
+        min-height: 30px;
+    }
+
+    .leftDate {
+        font-size: 12px;
+    }
+
+    .TopCon p {
+        margin-top: 9px;
+    }
+
+    .NewsConList li a h2 {
+        font-size: 16px;
+    }
+
+    .NewsConList li a {
+        padding: 12px 0;
+    }
+
+    .LinksList li a h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .AlumniList a .alumniImg {
+        width: 100%;
+        float: none;
+        overflow: hidden;
+    }
+
+    .AlumniList a .alumniImg img {
+        width: 100%;
+    }
+
+    .AlumniList a h2 {
+        width: 100%;
+        float: none;
+        overflow: hidden;
+        margin: 1% 0;
+    }
+
+    .mode03 .lf {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .mode03 .rt {
+        width: 100%;
+        float: none;
+        margin: 3% auto 0;
+    }
+
+    .AlumniList {
+        margin-top: 3%;
+    }
+}
+
+@media screen  and (max-width: 640px) {
+
+    #main {
+        display: none;
+    }
+
+    .flexslider .til_slides {
+        display: none;
+    }
+
+    .LinksList li {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+    }
+
+    .LinksList li img {
+        width: 100%;
+    }
+
+    .LinksList li a h2 {
+        bottom: -5px;
+        width: 100%;
+        min-height: 0;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .ResearchList li {
+        width: 100%;
+    }
+
+    .ResearchList li img {
+        width: 100%;
+        margin-top: 3%;
+        float: none;
+    }
+
+    .ResearchList li a h2 {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .TopImg {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .TopImg img {
+        width: 100%;
+    }
+
+    .TopCon {
+        width: 100%;
+        float: none;
+    }
+
+    .EventsList li .leftDate {
+        width: 17.73%;
+    }
+
+    .EvensCon {
+        width: 100%;
+        float: none;
+        padding-top: 5px;
+    }
+
+    .EmployList li {
+        width: 100%;
+        float: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 3%;
+    }
+
+    .EmployList li:last-child {
+        border-bottom: none;
+    }
+
+    .EmployList li a {
+        padding-right: 0;
+    }
+
+    .EmployList li a h2 {
+        margin-bottom: 0;
+        min-height: 49px;
+    }
+
+    .EmployList li.EmployNoBorder {
+        width: 100%;
+        float: none;
+        margin-top: 3%;
+    }
+
+    .EmployList li.EmployNoBorder a {
+        padding-left: 0;
+    }
+
+    .EmployList li a p {
+        margin-top: 1%;
+    }
+}
+
+
+@media screen /*and (min-width:320px)*/
+and (max-width: 360px) {
+
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://zhantianyou.bjtu.edu.cn/ -->
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Tang's Resource</title>
+    <link rel="icon" href="./bit_favicon.ico">
+    <link rel="stylesheet" href="./resources/css/resource/style.css">
+    <link rel="stylesheet" href="./resources/css/resource/index.css">
+    <link rel="stylesheet" href="resources/css/resource/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/resource/all.css">
+
+
+    <style>
+        .ResearchList li {
+            float: left;
+            width: 32.33%;
+            margin-right: 1%;
+        }
+    </style>
+</head>
+
+<body style="zoom: 1;">
+
+
+<!--content开始-->
+<div class="content">
+    <div class="Banner" id="main" style="height: 833px; width: 100%;">
+        <div class="flexslider">
+            <ul class="slides">
+                <li class="flex-active-slide"
+                    style="height: 833px; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+                    <a href=".">
+                        <img src="./resources/img/resource/poster.png" alt="" style="height: 833px; width: 100%;"
+                             draggable="false">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="WrapMode02" style="margin-top: 5rem;margin-bottom: 5rem">
+        <div class="row mode02">
+            <div class="col lf">
+                <div class="articleList02">
+                    <div class="articleTitle" style="text-align: center;">
+                        <h2><span>资源下载</span></h2>
+                    </div>
+                    <ul class="tzggList">
+                        <li class="index_tzgg">
+                            <div class="index_tzgg_con">
+                                <div class="index_tzgg_l">
+                                    <div class="index_tzgg_l_top">
+                                        <i class="fa fa-file-powerpoint" style="font-size: 3rem;margin-left: 1.3rem"></i>
+                                    </div>
+                                </div>
+                                <div class="index_tzgg_r">
+                                    <a href="https://pan.baidu.com/s/1tuRCRxqNzy1PPlgwMEQp3Q"> <p style="font-size: 2rem;line-height: 2.5rem;text-align: center">北京交通大学答辩 PPT 模板</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="index_tzgg">
+                            <div class="index_tzgg_con">
+                                <div class="index_tzgg_l">
+                                    <div class="index_tzgg_l_top">
+                                        <i class="fa fa-file-text" style="font-size: 3rem;margin-left: 1.3rem"></i>
+                                    </div>
+                                </div>
+                                <div class="index_tzgg_r">
+                                    <a href="https://resource.tang5618.com/北京交通大学答辩 Beamer 示例.pptx"> <p style="font-size: 2rem;line-height: 2.5rem;text-align: center">北京交通大学答辩 Beamer 模板</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="index_tzgg">
+                            <div class="index_tzgg_con">
+                                <div class="index_tzgg_l">
+                                    <div class="index_tzgg_l_top">
+                                        <i class="fa fa-file-powerpoint" style="font-size: 3rem;margin-left: 1.3rem"></i>
+                                    </div>
+                                </div>
+                                <div class="index_tzgg_r">
+                                    <a href="https://pan.baidu.com/s/1tuRCRxqNzy1PPlgwMEQp3Q"> <p style="font-size: 2rem;line-height: 2.5rem;text-align: center">北京交通大学答辩 PPT 示例</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content结束-->
+<!-- 通用JS -->
+<script type="text/javascript" src="resources/js/resource/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="resources/js/resource/script_2022.js"></script>
+<script type="text/javascript" src="resources/js/resource/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="resources/js/resource/newScript.js"></script>
+<script type="text/javascript">
+    Nav('#nav');//导航
+    Menu('.mbtn', '.navm');//手机版导航
+    ImgHeight();
+
+    function transDate() {
+        const week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        $(".index_tzgg_l_bottom p").text(function (index, html) {
+            return week[parseInt(new Date(html).getDay())]
+        });
+    }
+
+    $(function () {
+        transDate();
+        $(".flexslider").flexslider({
+            pauseOnHover: true,
+            slideshowSpeed: 4000,
+            animationSpeed: 500,
+            touch: true,
+            animation: "fade"
+        });
+    });
+</script>
+</body>
+</html>
