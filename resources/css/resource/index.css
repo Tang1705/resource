@@ -415,7 +415,7 @@ html[xmlns] .slides {
 
 .index_tzgg_con .index_tzgg_l {
     float: left;
-    width: 20%;
+    width: 100%;
 }
 
 .index_tzgg_l_top {
@@ -454,7 +454,7 @@ html[xmlns] .slides {
 
 .index_tzgg_con .index_tzgg_r {
     float: right;
-    width: 75%;
+    width: 5%;
 }
 
 .index_tzgg_r a {
